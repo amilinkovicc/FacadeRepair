@@ -120,6 +120,7 @@
             this.createPolygonButton.TabIndex = 19;
             this.createPolygonButton.Text = "Create Polygon";
             this.createPolygonButton.UseVisualStyleBackColor = true;
+            this.createPolygonButton.Click += new System.EventHandler(this.createPolygonButton_Click);
             // 
             // addPointGroupBox
             // 
@@ -150,6 +151,7 @@
             this.addPointButton.TabIndex = 28;
             this.addPointButton.Text = "Add Point";
             this.addPointButton.UseVisualStyleBackColor = true;
+            this.addPointButton.Click += new System.EventHandler(this.addPointButton_Click);
             // 
             // yValue
             // 

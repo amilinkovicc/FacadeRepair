@@ -12,6 +12,11 @@ namespace FacadeRepairLibrary
     public class PointModel
     {
         /// <summary>
+        /// The unique identifier for the point.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// The x-coordinate of the point.
         /// </summary>
         public double x { get; set; }
@@ -20,5 +25,21 @@ namespace FacadeRepairLibrary
         /// The y-coordinate of the point.
         /// </summary>
         public double y { get; set; }
+
+        public PointModel()
+        {
+
+        }
+
+        public PointModel(string xValue, string yValue)
+        {
+            int xValueNumber = 0;
+            int.TryParse(xValue, out xValueNumber);
+            x = xValueNumber;
+
+            int yValueNumber = 0;
+            int.TryParse(yValue, out yValueNumber);
+            y = yValueNumber;
+        }
     }
 }

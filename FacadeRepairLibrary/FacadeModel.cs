@@ -12,6 +12,11 @@ namespace FacadeRepairLibrary
     public class FacadeModel
     {
         /// <summary>
+        /// The unique identifier for the facade.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
         /// Name of the object that you're working on.
         /// </summary>
         public string objectName { get; set; }

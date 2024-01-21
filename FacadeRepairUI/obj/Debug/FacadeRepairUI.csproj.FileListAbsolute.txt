@@ -9,6 +9,9 @@ C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepa
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.csproj.CoreCompileInputs.cache
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.exe
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.pdb
-C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.AddPointForm.resources
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.CreatePolygonForm.resources
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.PolygonViewerForm.resources
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\bin\Debug\FacadeRepairLibrary.dll
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\bin\Debug\FacadeRepairLibrary.pdb
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.FacadeDashboardForm.resources
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.csproj.CopyComplete

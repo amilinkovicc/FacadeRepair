@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddPointForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddPointForm.Designer.cs">
-      <DependentUpon>AddPointForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="CreateFacadeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +57,12 @@
     </Compile>
     <Compile Include="CreatePolygonForm.Designer.cs">
       <DependentUpon>CreatePolygonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacadeDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacadeDashboardForm.Designer.cs">
+      <DependentUpon>FacadeDashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FacadeViewerForm.cs">
       <SubType>Form</SubType>
@@ -78,14 +78,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddPointForm.resx">
-      <DependentUpon>AddPointForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CreateFacadeForm.resx">
       <DependentUpon>CreateFacadeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreatePolygonForm.resx">
       <DependentUpon>CreatePolygonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacadeDashboardForm.resx">
+      <DependentUpon>FacadeDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacadeViewerForm.resx">
       <DependentUpon>FacadeViewerForm.cs</DependentUpon>
@@ -114,6 +114,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FacadeRepairLibrary\FacadeRepairLibrary.csproj">
+      <Project>{21d31cbf-9c74-402d-bb2e-91adc7daa22c}</Project>
+      <Name>FacadeRepairLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateFacadeForm));
             this.headerLabel = new System.Windows.Forms.Label();
             this.objectNameLabel = new System.Windows.Forms.Label();
-            this.facadeNameValue = new System.Windows.Forms.TextBox();
-            this.facadeAddressValue = new System.Windows.Forms.TextBox();
+            this.objectNameValue = new System.Windows.Forms.TextBox();
+            this.objectAddressValue = new System.Windows.Forms.TextBox();
             this.objectAddressLabel = new System.Windows.Forms.Label();
             this.objectOwnerValue = new System.Windows.Forms.TextBox();
             this.objectOwnerLabel = new System.Windows.Forms.Label();
@@ -44,6 +44,12 @@
             this.deletePolygonButton = new System.Windows.Forms.Button();
             this.createFacadeButton = new System.Windows.Forms.Button();
             this.loadPolygonButton = new System.Windows.Forms.Button();
+            this.dimensionsGroupBox = new System.Windows.Forms.GroupBox();
+            this.widthValue = new System.Windows.Forms.TextBox();
+            this.heightValue = new System.Windows.Forms.TextBox();
+            this.heightLabel = new System.Windows.Forms.Label();
+            this.widthLabel = new System.Windows.Forms.Label();
+            this.dimensionsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // headerLabel
@@ -68,26 +74,26 @@
             this.objectNameLabel.TabIndex = 2;
             this.objectNameLabel.Text = "Object Name";
             // 
-            // facadeNameValue
+            // objectNameValue
             // 
-            this.facadeNameValue.Location = new System.Drawing.Point(21, 119);
-            this.facadeNameValue.Name = "facadeNameValue";
-            this.facadeNameValue.Size = new System.Drawing.Size(404, 35);
-            this.facadeNameValue.TabIndex = 3;
+            this.objectNameValue.Location = new System.Drawing.Point(21, 119);
+            this.objectNameValue.Name = "objectNameValue";
+            this.objectNameValue.Size = new System.Drawing.Size(404, 35);
+            this.objectNameValue.TabIndex = 3;
             // 
-            // facadeAddressValue
+            // objectAddressValue
             // 
-            this.facadeAddressValue.Location = new System.Drawing.Point(19, 224);
-            this.facadeAddressValue.Name = "facadeAddressValue";
-            this.facadeAddressValue.Size = new System.Drawing.Size(404, 35);
-            this.facadeAddressValue.TabIndex = 5;
+            this.objectAddressValue.Location = new System.Drawing.Point(21, 207);
+            this.objectAddressValue.Name = "objectAddressValue";
+            this.objectAddressValue.Size = new System.Drawing.Size(404, 35);
+            this.objectAddressValue.TabIndex = 5;
             // 
             // objectAddressLabel
             // 
             this.objectAddressLabel.AutoSize = true;
             this.objectAddressLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.objectAddressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.objectAddressLabel.Location = new System.Drawing.Point(14, 184);
+            this.objectAddressLabel.Location = new System.Drawing.Point(14, 167);
             this.objectAddressLabel.Name = "objectAddressLabel";
             this.objectAddressLabel.Size = new System.Drawing.Size(196, 37);
             this.objectAddressLabel.TabIndex = 4;
@@ -95,7 +101,7 @@
             // 
             // objectOwnerValue
             // 
-            this.objectOwnerValue.Location = new System.Drawing.Point(19, 329);
+            this.objectOwnerValue.Location = new System.Drawing.Point(21, 295);
             this.objectOwnerValue.Name = "objectOwnerValue";
             this.objectOwnerValue.Size = new System.Drawing.Size(404, 35);
             this.objectOwnerValue.TabIndex = 7;
@@ -105,7 +111,7 @@
             this.objectOwnerLabel.AutoSize = true;
             this.objectOwnerLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.objectOwnerLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.objectOwnerLabel.Location = new System.Drawing.Point(14, 289);
+            this.objectOwnerLabel.Location = new System.Drawing.Point(14, 255);
             this.objectOwnerLabel.Name = "objectOwnerLabel";
             this.objectOwnerLabel.Size = new System.Drawing.Size(180, 37);
             this.objectOwnerLabel.TabIndex = 6;
@@ -116,7 +122,7 @@
             this.typeOfDamageLabel.AutoSize = true;
             this.typeOfDamageLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.typeOfDamageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.typeOfDamageLabel.Location = new System.Drawing.Point(12, 394);
+            this.typeOfDamageLabel.Location = new System.Drawing.Point(12, 495);
             this.typeOfDamageLabel.Name = "typeOfDamageLabel";
             this.typeOfDamageLabel.Size = new System.Drawing.Size(215, 37);
             this.typeOfDamageLabel.TabIndex = 8;
@@ -125,7 +131,7 @@
             // typeOfDamageDropDown
             // 
             this.typeOfDamageDropDown.FormattingEnabled = true;
-            this.typeOfDamageDropDown.Location = new System.Drawing.Point(244, 395);
+            this.typeOfDamageDropDown.Location = new System.Drawing.Point(244, 496);
             this.typeOfDamageDropDown.Name = "typeOfDamageDropDown";
             this.typeOfDamageDropDown.Size = new System.Drawing.Size(181, 38);
             this.typeOfDamageDropDown.TabIndex = 9;
@@ -184,12 +190,13 @@
             this.createFacadeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.createFacadeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createFacadeButton.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.createFacadeButton.Location = new System.Drawing.Point(391, 472);
+            this.createFacadeButton.Location = new System.Drawing.Point(633, 460);
             this.createFacadeButton.Name = "createFacadeButton";
-            this.createFacadeButton.Size = new System.Drawing.Size(225, 59);
+            this.createFacadeButton.Size = new System.Drawing.Size(224, 59);
             this.createFacadeButton.TabIndex = 14;
             this.createFacadeButton.Text = "Create Facade";
             this.createFacadeButton.UseVisualStyleBackColor = true;
+            this.createFacadeButton.Click += new System.EventHandler(this.createFacadeButton_Click);
             // 
             // loadPolygonButton
             // 
@@ -204,12 +211,62 @@
             this.loadPolygonButton.Text = "Load Polygon";
             this.loadPolygonButton.UseVisualStyleBackColor = true;
             // 
+            // dimensionsGroupBox
+            // 
+            this.dimensionsGroupBox.Controls.Add(this.widthValue);
+            this.dimensionsGroupBox.Controls.Add(this.heightValue);
+            this.dimensionsGroupBox.Controls.Add(this.heightLabel);
+            this.dimensionsGroupBox.Controls.Add(this.widthLabel);
+            this.dimensionsGroupBox.Location = new System.Drawing.Point(21, 340);
+            this.dimensionsGroupBox.Name = "dimensionsGroupBox";
+            this.dimensionsGroupBox.Size = new System.Drawing.Size(304, 147);
+            this.dimensionsGroupBox.TabIndex = 16;
+            this.dimensionsGroupBox.TabStop = false;
+            this.dimensionsGroupBox.Text = "Dimensions";
+            // 
+            // widthValue
+            // 
+            this.widthValue.Location = new System.Drawing.Point(115, 97);
+            this.widthValue.Name = "widthValue";
+            this.widthValue.Size = new System.Drawing.Size(180, 35);
+            this.widthValue.TabIndex = 27;
+            // 
+            // heightValue
+            // 
+            this.heightValue.Location = new System.Drawing.Point(115, 46);
+            this.heightValue.Name = "heightValue";
+            this.heightValue.Size = new System.Drawing.Size(180, 35);
+            this.heightValue.TabIndex = 26;
+            // 
+            // heightLabel
+            // 
+            this.heightLabel.AutoSize = true;
+            this.heightLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.heightLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.heightLabel.Location = new System.Drawing.Point(6, 44);
+            this.heightLabel.Name = "heightLabel";
+            this.heightLabel.Size = new System.Drawing.Size(103, 37);
+            this.heightLabel.TabIndex = 24;
+            this.heightLabel.Text = "Height:";
+            // 
+            // widthLabel
+            // 
+            this.widthLabel.AutoSize = true;
+            this.widthLabel.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.widthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.widthLabel.Location = new System.Drawing.Point(6, 95);
+            this.widthLabel.Name = "widthLabel";
+            this.widthLabel.Size = new System.Drawing.Size(95, 37);
+            this.widthLabel.TabIndex = 25;
+            this.widthLabel.Text = "Width:";
+            // 
             // CreateFacadeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1007, 544);
+            this.ClientSize = new System.Drawing.Size(1007, 552);
+            this.Controls.Add(this.dimensionsGroupBox);
             this.Controls.Add(this.loadPolygonButton);
             this.Controls.Add(this.createFacadeButton);
             this.Controls.Add(this.deletePolygonButton);
@@ -220,9 +277,9 @@
             this.Controls.Add(this.typeOfDamageLabel);
             this.Controls.Add(this.objectOwnerValue);
             this.Controls.Add(this.objectOwnerLabel);
-            this.Controls.Add(this.facadeAddressValue);
+            this.Controls.Add(this.objectAddressValue);
             this.Controls.Add(this.objectAddressLabel);
-            this.Controls.Add(this.facadeNameValue);
+            this.Controls.Add(this.objectNameValue);
             this.Controls.Add(this.objectNameLabel);
             this.Controls.Add(this.headerLabel);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -231,6 +288,8 @@
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "CreateFacadeForm";
             this.Text = "Create Facade";
+            this.dimensionsGroupBox.ResumeLayout(false);
+            this.dimensionsGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,8 +299,8 @@
 
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Label objectNameLabel;
-        private System.Windows.Forms.TextBox facadeNameValue;
-        private System.Windows.Forms.TextBox facadeAddressValue;
+        private System.Windows.Forms.TextBox objectNameValue;
+        private System.Windows.Forms.TextBox objectAddressValue;
         private System.Windows.Forms.Label objectAddressLabel;
         private System.Windows.Forms.TextBox objectOwnerValue;
         private System.Windows.Forms.Label objectOwnerLabel;
@@ -253,5 +312,10 @@
         private System.Windows.Forms.Button deletePolygonButton;
         private System.Windows.Forms.Button createFacadeButton;
         private System.Windows.Forms.Button loadPolygonButton;
+        private System.Windows.Forms.GroupBox dimensionsGroupBox;
+        private System.Windows.Forms.TextBox widthValue;
+        private System.Windows.Forms.TextBox heightValue;
+        private System.Windows.Forms.Label heightLabel;
+        private System.Windows.Forms.Label widthLabel;
     }
 }

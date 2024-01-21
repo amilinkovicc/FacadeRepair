@@ -16,5 +16,32 @@ namespace FacadeRepairUI
         {
             InitializeComponent();
         }
+
+        private void createFacadeButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool ValidateForm ()
+        {
+            bool output = true;
+
+            if (objectNameValue.Text.Length == 0)
+            {
+                output = false;
+            }
+
+            if (objectAddressValue.Text.Length == 0)
+            {
+                output = false;
+            }
+
+            if (objectOwnerValue.Text.Length == 0)
+            {
+                output = false;
+            }
+
+            return output;
+        }
     }
 }

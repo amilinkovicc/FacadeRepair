@@ -16,7 +16,12 @@ namespace FacadeRepairUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PolygonViewerForm());
+
+            //Initialize the database connection
+            FacadeRepairLibrary.GlobalConfig.InitializeConnection(true, true);
+            Application.Run(new CreatePolygonForm());
+
+            //Application.Run(new PolygonViewerForm());
         }
     }
 }
