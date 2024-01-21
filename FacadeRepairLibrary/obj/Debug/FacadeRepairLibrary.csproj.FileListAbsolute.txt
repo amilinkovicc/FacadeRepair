@@ -1,0 +1,6 @@
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\bin\Debug\FacadeRepairLibrary.dll
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\bin\Debug\FacadeRepairLibrary.pdb
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.csproj.AssemblyReference.cache
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.csproj.CoreCompileInputs.cache
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.dll
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.pdb
