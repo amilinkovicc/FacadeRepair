@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FacadeRepairLibrary
+namespace FacadeRepairLibrary.Model
 {
     /// <summary>
     /// Defines the damaged area.

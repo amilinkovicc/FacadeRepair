@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace FacadeRepairLibrary
 {
-    // TODO summary
-    /// <summary>
-    /// 
-    /// </summary>
-    public interface IDataConnection
+    public enum DatabaseType
     {
-        PointModel CreatePoint(PointModel model);
+        Sql,
+        TextFile
     }
 }

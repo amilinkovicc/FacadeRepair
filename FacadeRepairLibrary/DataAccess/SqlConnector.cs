@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FacadeRepairLibrary.Model;
 
-namespace FacadeRepairLibrary
+namespace FacadeRepairLibrary.DataAccess
 {
-    public class TextConnector : IDataConnection
+    public class SqlConnector : IDataConnection
     {
-        // TODO - Make the CreatePoint actually save to the txt file.
+        // TODO - Make the CreatePoint actually save to the database.
         /// <summary>
-        /// Saves a new point to the Text file.
+        /// Saves a new point to the database.
         /// </summary>
         /// <param name="model">The point informations.</param>
         /// <returns>The point informations, including the unique identifier.</returns>

@@ -15,3 +15,5 @@ C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\bin\Debug\FacadeRepa
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\bin\Debug\FacadeRepairLibrary.pdb
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.FacadeDashboardForm.resources
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\obj\Debug\FacadeRepairUI.csproj.CopyComplete
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairUI\bin\Debug\System.Configuration.ConfigurationManager.xml

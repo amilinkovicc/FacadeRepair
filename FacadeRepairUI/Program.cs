@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FacadeRepairLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace FacadeRepairUI
             Application.SetCompatibleTextRenderingDefault(false);
 
             //Initialize the database connection
-            FacadeRepairLibrary.GlobalConfig.InitializeConnection(true, true);
+            FacadeRepairLibrary.GlobalConfig.InitializeConnection(DatabaseType.TextFile);
             Application.Run(new CreatePolygonForm());
 
             //Application.Run(new PolygonViewerForm());

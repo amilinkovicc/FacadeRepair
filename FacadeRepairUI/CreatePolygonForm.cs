@@ -1,5 +1,4 @@
-﻿using FacadeRepairLibrary;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FacadeRepairLibrary;
+using FacadeRepairLibrary.DataAccess;
+using FacadeRepairLibrary.Model;
 
 namespace FacadeRepairUI
 {
@@ -29,10 +31,7 @@ namespace FacadeRepairUI
             {
                 PointModel model = new PointModel(xValue.Text, yValue.Text);
 
-                foreach (IDataConnection db in GlobalConfig.Connections)
-                {
-                    db.CreatePoint(model);
-                }
+                GlobalConfig.Connection.CreatePoint(model);
 
                 xValue.Text = "";
                 yValue.Text = "";

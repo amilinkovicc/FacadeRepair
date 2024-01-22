@@ -4,3 +4,8 @@ C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\Facad
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.csproj.CoreCompileInputs.cache
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.dll
 C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.pdb
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\bin\Debug\Dapper.dll
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\bin\Debug\Dapper.xml
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Aleksa\Fakultet\OOP\Projekat\FacadeRepair\FacadeRepairLibrary\obj\Debug\FacadeRepairLibrary.csproj.CopyComplete
