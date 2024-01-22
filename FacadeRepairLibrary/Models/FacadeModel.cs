@@ -32,9 +32,19 @@ namespace FacadeRepairLibrary.Model
         public string objectOwner { get; set; }
 
         /// <summary>
+        /// The height of the object.
+        /// </summary>
+        public double objectHeight { get; set; }
+
+        /// <summary>
+        /// The width of the object.
+        /// </summary>
+        public double objectWidth { get; set; }
+
+        /// <summary>
         /// Type of damage of the object that you're working on.
         /// </summary>
-        public TypeOfDamageModel damageType { get; set; }
+        public DamageType damageType { get; set; }
 
         /// <summary>
         /// List of the polygons of the object that you're working on.

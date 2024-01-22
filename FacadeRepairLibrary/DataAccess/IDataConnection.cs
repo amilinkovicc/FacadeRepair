@@ -14,5 +14,7 @@ namespace FacadeRepairLibrary.DataAccess
     public interface IDataConnection
     {
         PointModel CreatePoint(PointModel model);
+
+        FacadeModel CreateFacade(FacadeModel model);
     }
 }

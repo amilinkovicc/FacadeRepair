@@ -9,6 +9,11 @@ namespace FacadeRepairLibrary.DataAccess
 {
     public class SqlConnector : IDataConnection
     {
+        public FacadeModel CreateFacade(FacadeModel model)
+        {
+            throw new NotImplementedException();
+        }
+
         // TODO - Make the CreatePoint actually save to the database.
         /// <summary>
         /// Saves a new point to the database.

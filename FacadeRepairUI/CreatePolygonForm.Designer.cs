@@ -93,6 +93,7 @@
             // 
             // deletePointButton
             // 
+            this.deletePointButton.BackColor = System.Drawing.Color.White;
             this.deletePointButton.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.deletePointButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
             this.deletePointButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
@@ -104,7 +105,8 @@
             this.deletePointButton.Size = new System.Drawing.Size(178, 42);
             this.deletePointButton.TabIndex = 17;
             this.deletePointButton.Text = "Delete Point";
-            this.deletePointButton.UseVisualStyleBackColor = true;
+            this.deletePointButton.UseVisualStyleBackColor = false;
+            this.deletePointButton.Click += new System.EventHandler(this.deletePointButton_Click);
             // 
             // createPolygonButton
             // 
@@ -130,6 +132,8 @@
             this.addPointGroupBox.Controls.Add(this.xValue);
             this.addPointGroupBox.Controls.Add(this.xLabel);
             this.addPointGroupBox.Controls.Add(this.yLabel);
+            this.addPointGroupBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.addPointGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.addPointGroupBox.Location = new System.Drawing.Point(373, 103);
             this.addPointGroupBox.Name = "addPointGroupBox";
             this.addPointGroupBox.Size = new System.Drawing.Size(231, 284);

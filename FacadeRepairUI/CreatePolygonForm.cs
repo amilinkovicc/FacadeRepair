@@ -15,9 +15,31 @@ namespace FacadeRepairUI
 {
     public partial class CreatePolygonForm : Form
     {
+        private List<PointModel> pointsOfPolygon = new List<PointModel>();
+
         public CreatePolygonForm()
         {
             InitializeComponent();
+
+            CreateSampleData();
+
+            WireUpList();
+        }
+
+        private void CreateSampleData()
+        {
+            pointsOfPolygon.Add(new PointModel { x = 5, y = 10 });
+            pointsOfPolygon.Add(new PointModel { x = 20, y = 40 });
+            pointsOfPolygon.Add(new PointModel { x = 75, y = 30 });
+        }
+
+        // TODO - Load all the poins for specific polygon from SavadData
+
+        private void WireUpList()
+        {
+            pointsListBox.DataSource = null;
+            pointsListBox.DataSource = pointsOfPolygon;
+            pointsListBox.DisplayMember = "Cordinates";
         }
 
         private void createPolygonButton_Click(object sender, EventArgs e)
@@ -29,9 +51,13 @@ namespace FacadeRepairUI
         {
             if (ValidatePoint())
             {
-                PointModel model = new PointModel(xValue.Text, yValue.Text);
+                PointModel p = new PointModel(xValue.Text, yValue.Text);
 
-                GlobalConfig.Connection.CreatePoint(model);
+                p = GlobalConfig.Connection.CreatePoint(p);
+
+                pointsOfPolygon.Add(p);
+
+                WireUpList();
 
                 xValue.Text = "";
                 yValue.Text = "";
@@ -55,7 +81,6 @@ namespace FacadeRepairUI
             {
                 // You can just return false in every if and at the end return true.
                 // This way if you add messages that explain what is wrong with the input, user will get all messages at once instead one by one.
-                // TODO - Add messages
                 output = false;
             }
 
@@ -72,6 +97,18 @@ namespace FacadeRepairUI
             // TODO - It shouldn't be possible to add point out of facade.
 
             return output;
+        }
+
+        private void deletePointButton_Click(object sender, EventArgs e)
+        {
+            PointModel p = (PointModel)pointsListBox.SelectedItem;
+
+            if ( p != null )
+            {
+                pointsOfPolygon.Remove(p);
+
+                WireUpList();
+            }
         }
     }
 }

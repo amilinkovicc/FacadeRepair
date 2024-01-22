@@ -45,8 +45,8 @@
             this.createFacadeButton = new System.Windows.Forms.Button();
             this.loadPolygonButton = new System.Windows.Forms.Button();
             this.dimensionsGroupBox = new System.Windows.Forms.GroupBox();
-            this.widthValue = new System.Windows.Forms.TextBox();
-            this.heightValue = new System.Windows.Forms.TextBox();
+            this.objectWidthValue = new System.Windows.Forms.TextBox();
+            this.objectHeightValue = new System.Windows.Forms.TextBox();
             this.heightLabel = new System.Windows.Forms.Label();
             this.widthLabel = new System.Windows.Forms.Label();
             this.dimensionsGroupBox.SuspendLayout();
@@ -130,7 +130,11 @@
             // 
             // typeOfDamageDropDown
             // 
+            this.typeOfDamageDropDown.ForeColor = System.Drawing.SystemColors.WindowText;
             this.typeOfDamageDropDown.FormattingEnabled = true;
+            this.typeOfDamageDropDown.Items.AddRange(new object[] {
+            "Full",
+            "Partially"});
             this.typeOfDamageDropDown.Location = new System.Drawing.Point(244, 496);
             this.typeOfDamageDropDown.Name = "typeOfDamageDropDown";
             this.typeOfDamageDropDown.Size = new System.Drawing.Size(181, 38);
@@ -213,10 +217,12 @@
             // 
             // dimensionsGroupBox
             // 
-            this.dimensionsGroupBox.Controls.Add(this.widthValue);
-            this.dimensionsGroupBox.Controls.Add(this.heightValue);
+            this.dimensionsGroupBox.Controls.Add(this.objectWidthValue);
+            this.dimensionsGroupBox.Controls.Add(this.objectHeightValue);
             this.dimensionsGroupBox.Controls.Add(this.heightLabel);
             this.dimensionsGroupBox.Controls.Add(this.widthLabel);
+            this.dimensionsGroupBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dimensionsGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.dimensionsGroupBox.Location = new System.Drawing.Point(21, 340);
             this.dimensionsGroupBox.Name = "dimensionsGroupBox";
             this.dimensionsGroupBox.Size = new System.Drawing.Size(304, 147);
@@ -224,19 +230,19 @@
             this.dimensionsGroupBox.TabStop = false;
             this.dimensionsGroupBox.Text = "Dimensions";
             // 
-            // widthValue
+            // objectWidthValue
             // 
-            this.widthValue.Location = new System.Drawing.Point(115, 97);
-            this.widthValue.Name = "widthValue";
-            this.widthValue.Size = new System.Drawing.Size(180, 35);
-            this.widthValue.TabIndex = 27;
+            this.objectWidthValue.Location = new System.Drawing.Point(115, 97);
+            this.objectWidthValue.Name = "objectWidthValue";
+            this.objectWidthValue.Size = new System.Drawing.Size(180, 35);
+            this.objectWidthValue.TabIndex = 27;
             // 
-            // heightValue
+            // objectHeightValue
             // 
-            this.heightValue.Location = new System.Drawing.Point(115, 46);
-            this.heightValue.Name = "heightValue";
-            this.heightValue.Size = new System.Drawing.Size(180, 35);
-            this.heightValue.TabIndex = 26;
+            this.objectHeightValue.Location = new System.Drawing.Point(115, 46);
+            this.objectHeightValue.Name = "objectHeightValue";
+            this.objectHeightValue.Size = new System.Drawing.Size(180, 35);
+            this.objectHeightValue.TabIndex = 26;
             // 
             // heightLabel
             // 
@@ -313,8 +319,8 @@
         private System.Windows.Forms.Button createFacadeButton;
         private System.Windows.Forms.Button loadPolygonButton;
         private System.Windows.Forms.GroupBox dimensionsGroupBox;
-        private System.Windows.Forms.TextBox widthValue;
-        private System.Windows.Forms.TextBox heightValue;
+        private System.Windows.Forms.TextBox objectWidthValue;
+        private System.Windows.Forms.TextBox objectHeightValue;
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Label widthLabel;
     }

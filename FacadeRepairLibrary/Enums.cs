@@ -11,4 +11,9 @@ namespace FacadeRepairLibrary
         Sql,
         TextFile
     }
+    public enum DamageType
+    {
+        Full,
+        Partially
+    }
 }

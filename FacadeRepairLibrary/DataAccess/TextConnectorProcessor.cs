@@ -51,13 +51,48 @@ namespace FacadeRepairLibrary.DataAccess.TextHelpers
             return output;
         }
 
+        public static List<FacadeModel> ConvertToFacadeModels(this List<string> lines)
+        {
+            List<FacadeModel> output = new List<FacadeModel>();
+
+            foreach (string line in lines)
+            {
+                string[] cols = line.Split(',');
+
+                FacadeModel f = new FacadeModel();
+                f.Id = int.Parse(cols[0]);
+                f.objectName = cols[1];
+                f.objectAddress = cols[2];
+                f.objectOwner = cols[3];
+                f.objectHeight = double.Parse(cols[4]);
+                f.objectWidth = double.Parse(cols[5]);
+                f.damageType = (DamageType) Enum.Parse(typeof(DamageType), cols[6], true);
+                // TODO - Connect facades with polygons (foreign key)
+                output.Add(f);
+            }
+
+            return output;
+        }
+
         public static void SaveToPointsFile(this List<PointModel> models, string fileName)
         {
             List<string> lines = new List<string>();
 
-            foreach (PointModel p in models)
+            foreach(PointModel p in models)
             {
                 lines.Add($"{p.Id},{p.x},{p.y}");
+            }
+
+            File.WriteAllLines(fileName.FullFilePath(), lines);
+        }
+
+        public static void SaveToFacadesFile(this List<FacadeModel> models, string fileName)
+        {
+            List<string> lines = new List<string>();
+
+            foreach(FacadeModel f in models)
+            {
+                lines.Add($"{f.Id},{f.objectName},{f.objectAddress},{f.objectOwner},{f.objectHeight},{f.objectWidth},{f.damageType}");
             }
 
             File.WriteAllLines(fileName.FullFilePath(), lines);

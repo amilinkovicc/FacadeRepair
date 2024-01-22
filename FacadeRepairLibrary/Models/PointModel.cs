@@ -41,5 +41,10 @@ namespace FacadeRepairLibrary.Model
             int.TryParse(yValue, out yValueNumber);
             y = yValueNumber;
         }
+
+        public string Cordinates
+        {
+            get { return $"({x}, {y})"; }
+        }
     }
 }
